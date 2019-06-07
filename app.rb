@@ -21,6 +21,7 @@ class App < Sinatra::Base
     params.each do |x,k|
       @store << [k]
     end 
+    @store.flatten.join(" ") & "."
     binding.pry
   end
 
