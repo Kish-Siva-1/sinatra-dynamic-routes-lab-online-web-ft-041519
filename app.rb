@@ -29,6 +29,8 @@ class App < Sinatra::Base
     params[:number1] + params[:number2]
   when "subtract"
     params[:number1] - params[:number2]
+  when "multiply"
+    params[:number1] * params[:number2]
   when 
   binding.pry  
   end
