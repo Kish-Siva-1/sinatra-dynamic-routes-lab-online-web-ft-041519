@@ -37,7 +37,7 @@ class App < Sinatra::Base
     elsif operation == "divide"
       answer = number1 / number2 
     end 
-    binding.pry
+
     answer 
     
   end 
