@@ -38,6 +38,7 @@ class App < Sinatra::Base
       answer = number1 / number2 
     end 
     
+    binding.pry
     answer 
     
   end 
