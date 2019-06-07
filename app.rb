@@ -24,6 +24,7 @@ class App < Sinatra::Base
   end
 
   get "/:operation/:number1/:number2" do
+  
   case params[:operation]
   when "add"
     params[:number1] + params[:number2]
@@ -31,8 +32,8 @@ class App < Sinatra::Base
     params[:number1] - params[:number2]
   when "multiply"
     params[:number1] * params[:number2]
-  when 
-  binding.pry  
+  when "divide"
+    params[:number1] / params[:number2]
   end
   
 end
