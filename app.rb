@@ -20,9 +20,7 @@ class App < Sinatra::Base
     params.each do |x,k|
       @store << [k]
     end
-    binding.pry
-    @store.flatten.join(" ") & "."
-    binding.pry
+    @store.flatten.join(" ") + "."
   end
 
 end
