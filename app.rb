@@ -7,6 +7,7 @@ class App < Sinatra::Base
   end
   
   get "/square/:number" do
+    binding.pry
     @number = params[:number]**2
     #"#{@user_name}"
   end
