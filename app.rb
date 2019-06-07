@@ -35,6 +35,8 @@ class App < Sinatra::Base
     when "divide"
       params[:number1].to_i / params[:number2].to_i
     end
+    
+    params[:number1].to_i + params[:number2].to_i
     binding.pry
   end 
 
