@@ -27,7 +27,8 @@ class App < Sinatra::Base
     binding.pry
     case params[:operation]
     when "add"
-      params[:number1].to_i + params[:number2].to_i
+      @product = params[:number1].to_i + params[:number2].to_i
+      "#{@product}"
     when "subtract"
       params[:number1].to_i - params[:number2].to_i
     when "multiply"
@@ -35,8 +36,6 @@ class App < Sinatra::Base
     when "divide"
       params[:number1].to_i / params[:number2].to_i
     end
-    
-    params[:number1].to_i + params[:number2].to_i
     binding.pry
   end 
 
