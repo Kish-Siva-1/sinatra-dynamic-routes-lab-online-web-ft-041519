@@ -23,8 +23,8 @@ class App < Sinatra::Base
     @store.flatten.join(" ") + "."
   end
 
-  get "/say/:number/:phrase" do
-    @product = params[:phrase] * params[:number].to_i 
+  get "/:operation/:number1/:number2" do
+    @product = params[:number1] * params[:number2].to_i 
   end
   
 end
