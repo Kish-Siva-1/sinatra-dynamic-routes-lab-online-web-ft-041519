@@ -2,7 +2,6 @@ require_relative 'config/environment'
 
 class App < Sinatra::Base
   get "/reversename/:name" do
-    binding.pry
     @user_name = params[:name].reverse
     "#{@user_name}"
   end
@@ -25,7 +24,6 @@ class App < Sinatra::Base
   end
 
   get "/:operation/:number1/:number2" do
-  binding.pry
   case params[:operation]
   when "add"
     params[:number1].to_i + params[:number2].to_i
