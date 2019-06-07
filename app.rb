@@ -25,15 +25,13 @@ class App < Sinatra::Base
 
   get "/:operation/:number1/:number2" do
     binding.pry
-    case params[:operation]
-    when "add"
-      @product = params[:number1].to_i + params[:number2].to_i
-      "#{@product}"
-    when "subtract"
+    if params[:operation] == "add"
+      params[:number1].to_i + params[:number2].to_i
+    elsif params[:operation] == "subtract"
       params[:number1].to_i - params[:number2].to_i
-    when "multiply"
+    elsif params[:operation] == "multiply"
       params[:number1].to_i * params[:number2].to_i
-    when "divide"
+    elsif params[:operation] == "divide"
       params[:number1].to_i / params[:number2].to_i
     end
     binding.pry
